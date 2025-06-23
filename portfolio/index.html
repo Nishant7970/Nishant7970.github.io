@@ -1,129 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-
-body {
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
-    padding: 20px;
-}
-
-
-header {
-    display: flex;
-    justify-content: space-between;
-    background-color: #4CAF50;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-header h1 {
-    margin-bottom: 10px;
-}
-
-header a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-header a:hover {
-    text-decoration: underline;
-}
-
-
-a[href="#"]:not(header a) {
-    display: inline-block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    background-color: #2196F3;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-a[href="#"]:not(header a):hover {
-    background-color: #0b7dda;
-}
-
-section {
-    margin: 40px 0;
-    padding: 20px;
-    background-color: #ffffff;
-    border-left: 5px solid #4CAF50;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-section h2 {
-    color: #4CAF50;
-    margin-bottom: 10px;
-}
-
-section h3 {
-    color: #666;
-    margin-bottom: 15px;
-}
-
-
-section a {
-    display: block;
-    margin: 5px 0;
-    color: #2196F3;
-    text-decoration: none;
-}
-
-section a:hover {
-    text-decoration: underline;
-}
-
-p {
-    margin-top: 40px;
-    text-align: center;
-    font-size: 1.1rem;
-    color: #666;
-}
-
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nishant's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Nishant</h1>
-        <a href="#">Home</a>
-        <a href="#">services</a>
-        <a href="#">Projects</a>
-        <a href="#">Achivements</a>
-    </header>
-    <a href="#">My Portfolio</a>
-    <section class="section1">
-    <h2>My Poject</h2>
-    <h3>This is my project section where I will showcase my projects.</h3>
-    <a href="#">Project1</a>
-    <a href="#">Project2</a>
-    <a href="#">Project3</a>
 
-    
-    </section>
-    <section class="section2">
-        <h2>My Assignment</h2>
-        <a href="#">Assignment1</a>
-        <a href="#">Assignment2</a>
-        <a href="#">Assignment3</a>
-    </section>
-    <p>Thank you for visiting my portfolio!</p>
+  
+  <header>
+    <div class="navbar">
+      <div class="logo">Nishant</div>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <section class="hero">
+    <div class="glass-card center">
+      <h1>Nishant Kumar</h1>
+      <p>Web & Android Developer | Laravel Enthusiast | Tech Explorer</p>
+    </div>
+  </section>
+
+  <section id="about" class="glass-card section">
+    <h2>About Me</h2>
+    <p>
+      I’m a dedicated full-stack developer skilled in building responsive, scalable web and mobile applications using modern technologies like React, Laravel, and Kotlin.
+    </p>
+  </section>
+
+  <section id="education" class="glass-card section">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>B.Tech in Computer Science</strong> – LPU (2021–2025)</li>
+      <li><strong>12th (Intermediate)</strong> – Bihar Board (2020)</li>
+      <li><strong>10th (Matric)</strong> – Bihar Board (2018)</li>
+    </ul>
+  </section>
+
+  <section id="skills" class="glass-card section">
+    <h2>Skills</h2>
+    <ul class="skill-list">
+      <li>HTML, CSS, JavaScript</li>
+      <li>React, Node.js, Express</li>
+      <li>Android (Kotlin), Firebase</li>
+      <li>Laravel, PHP, MySQL</li>
+      <li>Git, GitHub, REST APIs</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="glass-card section">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <div class="project">
+        <h3>E-Commerce Website</h3>
+        <p>React & Node based store with auth, cart & payments.</p>
+      </div>
+      <div class="project">
+        <h3>Tourism Web App</h3>
+        <p>Beautiful frontend to explore Indian tourist destinations.</p>
+      </div>
+      <div class="project">
+        <h3>Farming Android App</h3>
+        <p>Helping farmers discover schemes & sell produce locally.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="resume" class="glass-card section center">
+    <h2>Resume</h2>
+    <a href="resume.pdf" download class="btn">Download My Resume</a>
+  </section>
+
+
+  <section id="contact" class="glass-card section contact-section">
+    <h2>Contact Me</h2>
+    <form>
+      <div class="form-group">
+        <input type="text" required>
+        <label>Your Name</label>
+      </div>
+      <div class="form-group">
+        <input type="email" required>
+        <label>Your Email</label>
+      </div>
+      <div class="form-group">
+        <textarea required></textarea>
+        <label>Your Message</label>
+      </div>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Nishant Kumar. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
