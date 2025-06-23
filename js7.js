@@ -32,7 +32,7 @@ const products = [
 // addToCart(2);
 // console.log(cart); // { '1': 1 }
 // const score=[2,3,5,7,3];
-// score.forEach((value)=>{
+// score.forEach((value)=> {
 //     console.log(value); // 2, 3, 5, 7, 3
 // })
 
@@ -65,3 +65,5 @@ const newScore = score.reduce((sum,value)=>{
     return sum+value;     
 });
 console.log(newScore); // 20---sum of all elements
+
+
