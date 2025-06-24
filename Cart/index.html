@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      ul.nav {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        padding: 0;
+        cursor: pointer;
+      }
+      li:hover {
+        color: blue;
+      }
+      .product {
+        margin-bottom: 10px;
+      }
+      button {
+        margin-left: 5px;
+      }
+    </style>
+  </head>
+  <body onload="showProducts()">
+    <h1>Shopping Cart</h1>
+    <ul class="nav">
+      <li onclick="showProducts()">Home</li>
+      <li onclick="showCart()">Cart</li>
+    </ul>
+    <hr />
+    <div id="root"></div>
+    <hr />
+    <h4>Shopping Cart. Copyright 2025. All rights reserved.</h4>
+    <script src="app.js"></script>
+  </body>
+</html>
