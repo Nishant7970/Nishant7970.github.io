@@ -50,7 +50,9 @@ db.employees.aggregate([
     
 ])
 
-
+db.employees.aggregate([
+    {$group:{_id:{department:"$department",name:"$name"},total:{$sum:"$salary"}}}
+])
 db.employees.aggregate([
     {$lookup:{from:"order",localField:"_id",foreignField:"empid",as:"order"}},
     {$unwind:"$order"}
@@ -66,3 +68,9 @@ db.employees.aggregate([
     {$project:{salary:1,name:1,"order.orderValue":1}},
     {$match:{salary:{$gt:1000}}}
 ])
+
+//for observe TotalDocsExamined
+db.employees.createIndex({"email":1})
+db.employees.getIndexes()
+db.employees.dropIndex("email_1")
+db.employees.find({email:"nishant@gmail.com"}).explain("executionStats")
