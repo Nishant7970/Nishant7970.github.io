@@ -30,3 +30,5 @@ db.employees.updateMany({},{$addToSet:{location:"Los Angles"}}) // similar to pu
 
 db.employees.updateMany({},{$pop:{location:1}}) //remove last element from location
 db.employees.updateMany({},{$pop:{location:1}}) // remove first element from location
+
+db.Users.updateOne({email:"nk7970922655@gmail.com"},{$set:{role:"admin"}},{upsert:true})
